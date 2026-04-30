@@ -153,7 +153,7 @@ export default function Home() {
           
           <div className="relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden scroll-reveal" style={{ transitionDelay: "200ms" }}>
              <img 
-                src="/images/therapy.png" 
+                src="/images/therapy.jpg" 
                 alt="Fisioterapia especializada" 
                 className="w-full h-full object-cover"
               />
