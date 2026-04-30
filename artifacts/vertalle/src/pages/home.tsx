@@ -441,7 +441,6 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div className="max-w-3xl mx-auto space-y-10 scroll-reveal relative z-10">
-          <img src={ogImage} alt="Vertalle Logo" className="h-20 w-auto mx-auto opacity-80 mix-blend-screen invert" style={{ filter: 'brightness(0) invert(1)' }} />
           <h2 className="text-5xl lg:text-7xl font-serif font-bold leading-tight">
             Um novo começo para a sua saúde
           </h2>
