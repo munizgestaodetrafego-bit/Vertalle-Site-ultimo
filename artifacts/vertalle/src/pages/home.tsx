@@ -314,7 +314,7 @@ export default function Home() {
           <div className="lg:col-span-5 scroll-reveal relative">
             <div className="aspect-[3/4] rounded-full overflow-hidden shadow-2xl relative border-8 border-background p-2 bg-secondary">
                <img 
-                  src="/images/founder.png" 
+                  src="/images/founder.jpg" 
                   alt="Giselle Gomide - Fundadora" 
                   className="w-full h-full object-cover rounded-full"
                 />
