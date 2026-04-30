@@ -292,39 +292,29 @@ export default function Home() {
       </section>
       {/* Process Section */}
       <section className="py-24 bg-card px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div className="scroll-reveal">
-               <img 
-                  src="/images/interior.png" 
-                  alt="Interior da Vertalle" 
-                  className="w-full aspect-square md:aspect-[4/3] object-cover rounded-[2rem] shadow-xl"
-                />
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+            <div className="space-y-6 scroll-reveal">
+              <h3 className="text-3xl font-serif font-bold text-foreground">Como funcionam os atendimentos fisioterapêuticos?</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Todo tratamento fisioterapêutico começa com uma consulta inicial minuciosa. Nela, realizamos exame físico detalhado, testes funcionais e avaliações específicas para identificar a real causa da sua queixa. A partir disso, elaboramos e definimos, junto com você, a frequência das sessões e o tempo de tratamento ideal.
+              </p>
             </div>
-            
-            <div className="space-y-16 scroll-reveal" style={{ transitionDelay: "200ms" }}>
-              <div className="space-y-6">
-                <h3 className="text-3xl font-serif font-bold text-foreground">Como funcionam os atendimentos fisioterapêuticos?</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Todo tratamento fisioterapêutico começa com uma consulta inicial minuciosa. Nela, realizamos exame físico detalhado, testes funcionais e avaliações específicas para identificar a real causa da sua queixa. A partir disso, elaboramos e definimos, junto com você, a frequência das sessões e o tempo de tratamento ideal.
-                </p>
-              </div>
-              
-              <div className="space-y-6">
-                <h3 className="text-3xl font-serif font-bold text-foreground">Como funcionam os atendimentos no Pilates?</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Os atendimentos de Pilates começam com uma avaliação individual para identificar suas necessidades e objetivos. São realizadas em grupos de até três pessoas, com duração de 50 minutos, conduzida por fisioterapeuta, garantindo acompanhamento personalizado e de qualidade.
-                </p>
-                <div className="pt-4">
-                  <a 
-                    href={WHATSAPP_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium text-lg transition-all hover:bg-primary/90 shadow-md hover:-translate-y-1"
-                  >
-                    Quero conhecer!
-                  </a>
-                </div>
+
+            <div className="space-y-6 scroll-reveal" style={{ transitionDelay: "150ms" }}>
+              <h3 className="text-3xl font-serif font-bold text-foreground">Como funcionam os atendimentos no Pilates?</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Os atendimentos de Pilates começam com uma avaliação individual para identificar suas necessidades e objetivos. São realizadas em grupos de até três pessoas, com duração de 50 minutos, conduzida por fisioterapeuta, garantindo acompanhamento personalizado e de qualidade.
+              </p>
+              <div className="pt-4">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium text-lg transition-all hover:bg-primary/90 shadow-md hover:-translate-y-1"
+                >
+                  Quero conhecer!
+                </a>
               </div>
             </div>
           </div>
