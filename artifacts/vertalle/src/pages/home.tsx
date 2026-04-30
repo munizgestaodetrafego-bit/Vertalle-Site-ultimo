@@ -457,6 +457,53 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Location */}
+      <section className="py-24 px-6 lg:px-12 bg-secondary/20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div className="lg:col-span-2 space-y-6 scroll-reveal">
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase">Onde estamos</h2>
+            <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground leading-tight">
+              Venha nos visitar
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Um espaço pensado para receber você com conforto, acolhimento e tudo o que é necessário para o seu tratamento.
+            </p>
+            <div className="flex items-start gap-4 pt-2">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <p className="font-serif font-bold text-xl text-foreground">Rua Conselheiro Lafaiete, 44</p>
+                <p className="text-muted-foreground">Floresta · Belo Horizonte / MG</p>
+              </div>
+            </div>
+            <div className="pt-4">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Conselheiro+Lafaiete+44+Floresta+Belo+Horizonte+MG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90 shadow-md hover:-translate-y-0.5"
+              >
+                Ver rota no Google Maps
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-3 scroll-reveal" style={{ transitionDelay: "200ms" }}>
+            <div className="relative rounded-[2rem] overflow-hidden shadow-xl border-4 border-background aspect-[4/3] lg:aspect-[16/10]">
+              <iframe
+                title="Localização Vertalle"
+                src="https://maps.google.com/maps?q=Rua%20Conselheiro%20Lafaiete%2044%20Floresta%20Belo%20Horizonte%20MG&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-card pt-20 pb-10 px-6 lg:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
@@ -500,6 +547,10 @@ export default function Home() {
               Contato
             </h4>
             <ul className="space-y-4">
+              <li className="text-muted-foreground">
+                <p className="text-foreground font-medium">Rua Conselheiro Lafaiete, 44</p>
+                <p className="text-sm">Floresta · Belo Horizonte / MG</p>
+              </li>
               <li>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-background border border-border text-foreground hover:border-primary hover:text-primary transition-colors text-sm font-medium">
                   <MessageCircle className="w-4 h-4" />
