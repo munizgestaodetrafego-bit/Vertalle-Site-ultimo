@@ -10,7 +10,9 @@ import {
   Instagram,
   MessageCircle,
   Clock,
-  MapPin
+  MapPin,
+  Quote,
+  Star
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -344,6 +346,55 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <section className="py-24 px-6 lg:px-12 bg-card">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 scroll-reveal">
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Depoimentos</h2>
+            <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground">
+              O que dizem nossos pacientes
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "Atendimento impecável! O espaço da clínica é lindo e muito organizado. A profissional é extremamente preparada, cuidadosa e dedicada, me senti acolhida do início ao fim. Experiência muito positiva. Recomendo demais!!",
+                name: "Adriana Soares"
+              },
+              {
+                quote: "Realizei o meu primeiro atendimento com a Giselle e fiquei admirada com a competência já me sinto muito melhor, além do espaço ser de muita qualidade, bom gosto e conforto! Super indico!",
+                name: "Jéssica Lima"
+              },
+              {
+                quote: "Ambiente adequado e muito bem equipado. Destaque para a qualificação profissional, bem como a comprovada experiência da fisioterapeuta responsável!",
+                name: "Luiz Geraldo"
+              }
+            ].map((t, i) => (
+              <div
+                key={i}
+                className="relative bg-background rounded-[2rem] p-10 shadow-sm border border-border flex flex-col scroll-reveal"
+                style={{ transitionDelay: `${i * 150}ms` }}
+              >
+                <Quote className="w-10 h-10 text-primary/30 mb-6" />
+                <p className="text-foreground/80 leading-relaxed text-lg font-light italic flex-1">
+                  "{t.quote}"
+                </p>
+                <div className="mt-8 pt-6 border-t border-border">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, idx) => (
+                      <Star key={idx} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="font-serif font-bold text-foreground text-lg">{t.name}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-24 bg-secondary/20 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto scroll-reveal">
