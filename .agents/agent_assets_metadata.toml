@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "iAoZsJdSMoFW5O-RXLeih"
+uri = "file://artifacts/vertalle/public/images/studio.png"
+type = "image"
+title = "Pilates reformer studio"
+
+[[generated]]
+id = "k2heNI3IQYsJRZmi6eZ6n"
+uri = "file://artifacts/vertalle/public/images/therapy.png"
+type = "image"
+title = "Hands performing spine therapy"
+
+[[generated]]
+id = "_nwjWRaKjSgeGhzL7cAal"
+uri = "file://artifacts/vertalle/public/images/founder.png"
+type = "image"
+title = "Founder portrait"
+
+[[generated]]
+id = "0zj_GKSibP0UWRv7I21l-"
+uri = "file://artifacts/vertalle/public/images/interior.png"
+type = "image"
+title = "Calm interior"

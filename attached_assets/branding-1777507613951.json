@@ -1,0 +1,125 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "PT Sans",
+      "role": "body"
+    },
+    {
+      "family": "Merriweather",
+      "role": "heading"
+    },
+    {
+      "family": "Roboto",
+      "role": "unknown"
+    },
+    {
+      "family": "Google Sans",
+      "role": "unknown"
+    }
+  ],
+  "colors": {
+    "primary": "#0000EE",
+    "secondary": "#AC8082",
+    "accent": "#976063",
+    "background": "#FFFFFF",
+    "textPrimary": "#212121",
+    "link": "#976063"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "PT Sans",
+      "heading": "Merriweather"
+    },
+    "fontStacks": {
+      "heading": [
+        "sans-serif"
+      ],
+      "body": [
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Merriweather",
+        "serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "25.3333px",
+      "body": "14.6667px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {
+    "input": {
+      "background": "transparent",
+      "textColor": "#000000",
+      "borderColor": null,
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "favicon": "File saved at: attached_assets/favicon.ico",
+    "ogImage": "File saved at: attached_assets/ogImage.png"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": -1,
+    "reasoning": "The only candidate is invisible and tiny, not suitable as a brand logo. No visible, appropriate logo was found.",
+    "confidence": 0.2,
+    "rejected": true,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "Both buttons serve navigation purposes ('Skip to main content' and 'Skip to navigation') and do not represent a primary call-to-action. They share the same color, making it impossible to distinguish a primary CTA based on color or function."
+    },
+    "secondary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "As both buttons are navigation aids with identical colors, there is no distinct secondary CTA."
+    },
+    "confidence": 0.9
+  },
+  "personality": {
+    "tone": "minimalist",
+    "energy": "low",
+    "targetAudience": "unknown"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.9,
+    "colors": 0.9,
+    "overall": 0.9
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": -1,
+        "selectedLogoReasoning": "The only candidate is invisible and tiny, not suitable as a brand logo. No visible, appropriate logo was found.",
+        "confidence": 0.2
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}
