@@ -5,22 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
-
-/**
- * Tipo de queixa ou interesse
- */
-export type BookingRequestConcernType =
-  (typeof BookingRequestConcernType)[keyof typeof BookingRequestConcernType];
-
-export const BookingRequestConcernType = {
-  coluna: "coluna",
-  pilates: "pilates",
-  idoso: "idoso",
-  outro: "outro",
-} as const;
+import type { BookingRequestConcernType } from "./bookingRequestConcernType";
 
 export interface BookingRequest {
   /**
@@ -42,12 +27,4 @@ export interface BookingRequest {
    * @maxLength 1000
    */
   message?: string;
-}
-
-export interface BookingResponse {
-  ok: boolean;
-}
-
-export interface ErrorResponse {
-  error: string;
 }

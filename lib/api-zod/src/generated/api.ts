@@ -14,3 +14,40 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Sends a booking request to the clinic by email.
+ * @summary Submit a booking request
+ */
+export const createBookingBodyNameMin = 2;
+export const createBookingBodyNameMax = 120;
+
+export const createBookingBodyPhoneMin = 8;
+export const createBookingBodyPhoneMax = 30;
+
+export const createBookingBodyMessageMax = 1000;
+
+export const CreateBookingBody = zod.object({
+  name: zod
+    .string()
+    .min(createBookingBodyNameMin)
+    .max(createBookingBodyNameMax)
+    .describe("Nome completo"),
+  phone: zod
+    .string()
+    .min(createBookingBodyPhoneMin)
+    .max(createBookingBodyPhoneMax)
+    .describe("Telefone com DDD"),
+  concernType: zod
+    .enum(["coluna", "pilates", "idoso", "outro"])
+    .describe("Tipo de queixa ou interesse"),
+  message: zod
+    .string()
+    .max(createBookingBodyMessageMax)
+    .optional()
+    .describe("Detalhes adicionais (opcional)"),
+});
+
+export const CreateBookingResponse = zod.object({
+  ok: zod.boolean(),
+});

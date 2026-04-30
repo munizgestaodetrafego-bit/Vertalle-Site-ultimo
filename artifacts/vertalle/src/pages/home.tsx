@@ -17,6 +17,7 @@ import {
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import ogImage from "@assets/ogImage.png";
+import { BookingForm } from "@/components/booking-form";
 
 const WHATSAPP_LINK = "http://wa.me/5531985189079";
 const INSTAGRAM_LINK = "https://www.instagram.com/vertallebh";
@@ -360,9 +361,7 @@ export default function Home() {
 
           <div className="text-center mt-16 scroll-reveal">
             <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#reservar"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium text-lg transition-all hover:bg-primary/90 shadow-md hover:-translate-y-1"
             >
               Agendar uma visita
@@ -495,25 +494,35 @@ export default function Home() {
           </Accordion>
         </div>
       </section>
-      {/* Final CTA */}
-      <section className="py-32 px-6 lg:px-12 bg-foreground text-background text-center relative overflow-hidden">
-        {/* Subtle texture/glow */}
+      {/* Booking form */}
+      <section id="reservar" className="py-24 px-6 lg:px-12 bg-foreground text-background relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
-        
-        <div className="max-w-3xl mx-auto space-y-10 scroll-reveal relative z-10">
-          <h2 className="text-5xl lg:text-7xl font-serif font-bold leading-tight">
-            Um novo começo para a sua saúde
-          </h2>
-          <div className="pt-8">
-            <a 
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 px-10 py-5 rounded-full bg-primary text-primary-foreground font-bold text-xl transition-all hover:bg-primary/90 hover:scale-105 shadow-2xl text-center"
-            >
-              Quero agendar uma avaliação
-              <ArrowRight className="w-6 h-6" />
-            </a>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+          <div className="space-y-6 scroll-reveal">
+            <h2 className="text-sm font-bold tracking-widest text-secondary uppercase">Reservar avaliação</h2>
+            <h3 className="text-4xl lg:text-6xl font-serif font-bold leading-tight">
+              Um novo começo para a sua saúde
+            </h3>
+            <p className="text-lg text-background/80 leading-relaxed max-w-md">
+              Conte um pouco sobre você no formulário ao lado e a Giselle entrará em contato pessoalmente para agendar sua avaliação.
+            </p>
+            <p className="text-base text-background/60">
+              Prefere o WhatsApp?{" "}
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary underline underline-offset-4 hover:text-background transition-colors font-medium"
+              >
+                Fale conosco por aqui
+              </a>
+              .
+            </p>
+          </div>
+
+          <div className="scroll-reveal" style={{ transitionDelay: "150ms" }}>
+            <BookingForm />
           </div>
         </div>
       </section>

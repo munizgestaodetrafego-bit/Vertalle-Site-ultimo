@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: booking
+    description: Booking requests
 paths:
   /healthz:
     get:
@@ -24,6 +26,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /booking:
+    post:
+      operationId: createBooking
+      tags: [booking]
+      summary: Submit a booking request
+      description: Sends a booking request to the clinic by email.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookingRequest"
+      responses:
+        "200":
+          description: Booking received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BookingResponse"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "502":
+          description: Email delivery failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +66,46 @@ components:
           type: string
       required:
         - status
-
+    BookingRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 2
+          maxLength: 120
+          description: Nome completo
+        phone:
+          type: string
+          minLength: 8
+          maxLength: 30
+          description: Telefone com DDD
+        concernType:
+          type: string
+          enum:
+            - coluna
+            - pilates
+            - idoso
+            - outro
+          description: Tipo de queixa ou interesse
+        message:
+          type: string
+          maxLength: 1000
+          description: Detalhes adicionais (opcional)
+      required:
+        - name
+        - phone
+        - concernType
+    BookingResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+      required:
+        - ok
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
