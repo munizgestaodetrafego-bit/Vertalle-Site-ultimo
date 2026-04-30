@@ -67,7 +67,6 @@ export default function Home() {
         </svg>
         <span className="hidden sm:inline relative z-10 font-semibold">Fale conosco</span>
       </a>
-
       {/* Navigation / Header */}
       <header className="absolute top-0 w-full z-50 py-6 px-6 lg:px-12 flex justify-between items-center">
         <div className="flex items-center gap-3">
@@ -367,7 +366,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-24 px-6 lg:px-12 bg-card">
         <div className="max-w-7xl mx-auto">
@@ -415,7 +413,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* FAQ */}
       <section className="py-24 bg-secondary/20 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto scroll-reveal">
@@ -524,7 +521,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-card pt-20 pb-10 px-6 lg:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
