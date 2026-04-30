@@ -330,6 +330,59 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Gallery — Conheça o espaço */}
+      <section className="py-24 px-6 lg:px-12 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 scroll-reveal max-w-2xl mx-auto">
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Nosso espaço</h2>
+            <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
+              Conheça a Vertalle
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Um ambiente cuidadosamente preparado, com equipamentos de alta qualidade e um clima acolhedor que faz toda a diferença no seu tratamento.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-4">
+            {[
+              { src: "/images/gallery/04.jpeg", alt: "Estúdio Vertalle com equipamentos de Pilates", className: "col-span-2 row-span-2" },
+              { src: "/images/gallery/01.jpeg", alt: "Sala de Pilates com tapetes e logo Vertalle", className: "col-span-2 row-span-1" },
+              { src: "/images/gallery/03.jpeg", alt: "Aparelhos Reformer no estúdio", className: "col-span-1 row-span-1" },
+              { src: "/images/gallery/05.jpeg", alt: "Cadillac e Reformer no espaço Vertalle", className: "col-span-1 row-span-1" },
+              { src: "/images/gallery/07.jpeg", alt: "Vista ampla do estúdio Vertalle", className: "col-span-2 row-span-2" },
+              { src: "/images/gallery/02.jpeg", alt: "Detalhe dos aparelhos Classic Pilates", className: "col-span-1 row-span-1" },
+              { src: "/images/gallery/06.jpeg", alt: "Sala de avaliação fisioterapêutica", className: "col-span-1 row-span-1" }
+            ].map((img, i) => (
+              <div
+                key={i}
+                className={`${img.className} relative rounded-2xl overflow-hidden group shadow-md scroll-reveal`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-16 scroll-reveal">
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium text-lg transition-all hover:bg-primary/90 shadow-md hover:-translate-y-1"
+            >
+              Agendar uma visita
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Founder Bio */}
       <section className="py-24 px-6 lg:px-12 bg-background">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
