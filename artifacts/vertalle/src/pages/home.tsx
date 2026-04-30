@@ -415,9 +415,8 @@ export default function Home() {
               <img src={ogImage} alt="Vertalle Logo" className="h-8 w-auto" />
               <span className="font-serif font-bold text-xl text-foreground">Vertalle</span>
             </div>
-            <p className="text-muted-foreground">
-              Fisioterapia especializada em coluna e Pilates. Cuidado humanizado para o seu bem-estar.
-            </p>
+            <p className="text-muted-foreground">Fisioterapia especializada em coluna e Pilates.
+            Cuidado humanizado para o seu bem-estar.</p>
             <div className="flex gap-4">
               <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Instagram className="w-5 h-5" />
