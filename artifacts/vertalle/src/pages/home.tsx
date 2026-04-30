@@ -370,7 +370,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Founder Bio */}
       <section className="py-24 px-6 lg:px-12 bg-background">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -504,9 +503,7 @@ export default function Home() {
             <h3 className="text-4xl lg:text-6xl font-serif font-bold leading-tight">
               Um novo começo para a sua saúde
             </h3>
-            <p className="text-lg text-background/80 leading-relaxed max-w-md">
-              Conte um pouco sobre você no formulário ao lado e a Giselle entrará em contato pessoalmente para agendar sua avaliação.
-            </p>
+            <p className="text-lg text-background/80 leading-relaxed max-w-md">Conte um pouco sobre você no formulário ao lado, e a Giselle entrará em contato pessoalmente para agendar sua avaliação.</p>
             <p className="text-base text-background/60">
               Prefere o WhatsApp?{" "}
               <a
