@@ -228,7 +228,7 @@ export default function Home() {
           <div className="mb-24 scroll-reveal">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">Por que escolher a Vertalle?</h2>
-              <p className="text-xl text-muted-foreground">Onde clínicas tradicionais falham, nós focamos em você.</p>
+              <p className="text-xl text-muted-foreground">Onde estúdios tradicionais falham, nós focamos em você.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
