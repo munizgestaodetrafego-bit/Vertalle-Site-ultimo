@@ -53,9 +53,9 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"
-        className="fixed bottom-6 right-6 z-[60] group flex items-center gap-3 bg-[#25D366] text-white px-5 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 fill-mode-forwards"
+        className="fixed bottom-6 right-6 z-[60] group flex items-center gap-3 bg-primary text-primary-foreground px-5 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 fill-mode-forwards"
       >
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-ping pointer-events-none"></span>
+        <span className="absolute inset-0 rounded-full bg-primary opacity-60 animate-ping pointer-events-none"></span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
