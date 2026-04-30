@@ -346,7 +346,6 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-4">
             {[
               { src: "/images/gallery/04.jpeg", alt: "Estúdio Vertalle com equipamentos de Pilates", className: "col-span-2 row-span-2" },
-              { src: "/images/gallery/01.jpeg", alt: "Sala de Pilates com tapetes e logo Vertalle", className: "col-span-2 row-span-1" },
               { src: "/images/gallery/03.jpeg", alt: "Aparelhos Reformer no estúdio", className: "col-span-1 row-span-1" },
               { src: "/images/gallery/05.jpeg", alt: "Cadillac e Reformer no espaço Vertalle", className: "col-span-1 row-span-1" },
               { src: "/images/gallery/07.jpeg", alt: "Vista ampla do estúdio Vertalle", className: "col-span-2 row-span-2" },
