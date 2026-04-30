@@ -45,7 +45,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans overflow-x-hidden">
-      
       {/* Navigation / Header */}
       <header className="absolute top-0 w-full z-50 py-6 px-6 lg:px-12 flex justify-between items-center">
         <div className="flex items-center gap-3">
@@ -62,7 +61,6 @@ export default function Home() {
           Agendar Consulta
         </a>
       </header>
-
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 lg:pt-32 px-6 lg:px-12 overflow-hidden">
         {/* Abstract shapes / background texture */}
@@ -122,7 +120,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Pain Points Section */}
       <section className="py-24 bg-card px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -160,7 +157,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Highlight / Stat Section */}
       <section className="py-24 px-6 lg:px-12 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white rounded-full blur-3xl opacity-10 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
@@ -191,7 +187,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
       {/* What we treat & Approach */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
@@ -239,7 +234,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Problem column */}
               <div className="space-y-4">
-                <div className="text-center pb-4 text-muted-foreground font-medium text-sm tracking-widest uppercase">Clínicas Genéricas</div>
+                <div className="text-center pb-4 text-muted-foreground font-medium text-sm tracking-widest uppercase">ESTÚDIOS GenéricOS</div>
                 {[
                   "Sessões avulsas e tratamentos eternos",
                   "Turmas lotadas de pilates",
@@ -273,7 +268,6 @@ export default function Home() {
           
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-24 bg-card px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
@@ -314,7 +308,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Founder Bio */}
       <section className="py-24 px-6 lg:px-12 bg-background">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -351,7 +344,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* FAQ */}
       <section className="py-24 bg-secondary/20 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto scroll-reveal">
@@ -392,7 +384,6 @@ export default function Home() {
           </Accordion>
         </div>
       </section>
-
       {/* Final CTA */}
       <section className="py-32 px-6 lg:px-12 bg-foreground text-background text-center relative overflow-hidden">
         {/* Subtle texture/glow */}
@@ -416,7 +407,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-card pt-20 pb-10 px-6 lg:px-12 border-t border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
