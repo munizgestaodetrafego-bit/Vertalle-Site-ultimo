@@ -120,7 +120,7 @@ export default function Home() {
           <div className="relative scroll-reveal" style={{ transitionDelay: "200ms" }}>
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
               <img 
-                src="/images/studio.webp" 
+                src="/images/studio-hero.jpeg" 
                 alt="Interior do estúdio de Pilates Vertalle" 
                 className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-1000"
               />
