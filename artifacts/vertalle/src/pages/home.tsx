@@ -249,13 +249,13 @@ export default function Home() {
           <div className="mb-24 scroll-reveal">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">Por que escolher a Vertalle?</h2>
-              <p className="text-xl text-muted-foreground">Onde estúdios tradicionais falham, nós focamos em você.</p>
+              <p className="text-xl text-muted-foreground">Onde clínicas tradicionais falham, nós focamos em você.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Problem column */}
               <div className="space-y-4">
-                <div className="text-center pb-4 text-muted-foreground font-medium text-sm tracking-widest uppercase">ESTÚDIOS GenéricOS</div>
+                <div className="text-center pb-4 text-muted-foreground font-medium text-sm tracking-widest uppercase">CLÍNICAS GenéricAS</div>
                 {[
                   "Sessões avulsas e tratamentos eternos",
                   "Turmas lotadas de pilates",
