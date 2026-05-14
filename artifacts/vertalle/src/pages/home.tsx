@@ -418,7 +418,7 @@ export default function Home() {
             {[
               {
                 quote: "Atendimento excelente! O espaço é muito organizado e lindo. A profissional Giselle é muito atenciosa. Super recomendo",
-                name: "Adriana Soares"
+                name: "Nayara Amorim"
               },
               {
                 quote: "Realizei o meu primeiro atendimento com a Giselle e fiquei admirada com a competência já me sinto muito melhor, além do espaço ser de muita qualidade, bom gosto e conforto! Super indico!",
