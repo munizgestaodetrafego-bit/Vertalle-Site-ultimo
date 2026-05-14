@@ -148,9 +148,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
               Você se identifica com isso?
             </h2>
-            <p className="text-lg text-muted-foreground mb-10 max-w-md">
-              Seu corpo está dando sinais de que precisa de atenção e ignorar isso pode piorar o problema.
-            </p>
+            <p className="text-lg text-muted-foreground mb-10 max-w-md">Seu corpo dá sinais quando algo precisa de atenção e ignorá-los pode fazer o problema se intensificar.</p>
             
             <div className="space-y-6">
               {[
