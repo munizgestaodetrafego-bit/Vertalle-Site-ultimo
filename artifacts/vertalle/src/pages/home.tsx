@@ -501,7 +501,7 @@ export default function Home() {
             <h3 className="text-4xl lg:text-6xl font-serif font-bold leading-tight">
               Um novo começo para a sua saúde
             </h3>
-            <p className="text-lg text-background/80 leading-relaxed max-w-md">Conte um pouco sobre você no formulário ao lado, e a Giselle entrará em contato pessoalmente para agendar sua avaliação.</p>
+            <p className="text-lg text-background/80 leading-relaxed max-w-md">Conte um pouco sobre você no formulário ao lado, e entraremos em contato para agendar sua avaliação.</p>
             <p className="text-base text-background/60">
               Prefere o WhatsApp?{" "}
               <a
