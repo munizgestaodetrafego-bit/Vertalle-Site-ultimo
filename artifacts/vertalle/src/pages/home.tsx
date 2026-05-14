@@ -101,9 +101,7 @@ export default function Home() {
               Transforme sua vida com <span className="text-primary italic">movimento</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Não deixe a dor na coluna limitar sua vida e impedir você de viver bem. Espaço dedicado ao bem-estar, com foco no tratamento da coluna vertebral e Pilates.
-            </p>
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">Espaço dedicado ao bem-estar, com foco no tratamento da coluna vertebral e Pilates.</p>
             
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
               <a 
