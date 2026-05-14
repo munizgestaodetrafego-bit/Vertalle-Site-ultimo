@@ -422,7 +422,7 @@ export default function Home() {
               },
               {
                 quote: "Giselle passando para agradecer, o Pilates mudou a minha vida. Gratidão",
-                name: "Giselle"
+                name: "Simone"
               },
               {
                 quote: "Ambiente adequado e muito bem equipado. Destaque para a qualificação profissional, bem como a comprovada experiência da fisioterapeuta responsável!",
