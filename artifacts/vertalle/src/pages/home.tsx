@@ -148,7 +148,9 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
               Você se identifica com isso?
             </h2>
-            <p className="text-lg text-muted-foreground mb-10 max-w-md">Seu corpo dá sinais quando algo precisa de atenção e ignorá-los pode fazer o problema se intensificar.</p>
+            <p className="text-lg text-muted-foreground mb-10 max-w-md">
+              Seu corpo está dando sinais de que precisa de atenção e ignorar isso pode piorar o problema.
+            </p>
             
             <div className="space-y-6">
               {[
@@ -237,7 +239,9 @@ export default function Home() {
                 <ShieldCheck className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-3xl font-serif font-bold text-foreground mb-6">E se você não sente dor, também podemos ajudar:</h3>
-              <p className="text-xl text-muted-foreground leading-relaxed">Oferecemos atendimentos no Pilates como prática de exercício físico para quem deseja cuidar do corpo, prevenir dores, conquistar mais qualidade de vida e bem-estar.</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Oferecemos atendimentos no Pilates como prática de exercício físico para quem deseja cuidar do corpo, prevenir dores e conquistar mais qualidade de vida e bem-estar.
+              </p>
             </div>
           </div>
 
