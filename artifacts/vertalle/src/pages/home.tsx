@@ -417,7 +417,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "Atendimento impecável! O espaço da clínica é lindo e muito organizado. A profissional é extremamente preparada, cuidadosa e dedicada, me senti acolhida do início ao fim. Experiência muito positiva. Recomendo demais!!",
+                quote: "Atendimento excelente! O espaço é muito organizado e lindo. A profissional Giselle é muito atenciosa. Super recomendo",
                 name: "Adriana Soares"
               },
               {
