@@ -237,9 +237,7 @@ export default function Home() {
                 <ShieldCheck className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-3xl font-serif font-bold text-foreground mb-6">E se você não sente dor, também podemos ajudar:</h3>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Oferecemos atendimentos no Pilates como prática de exercício físico para quem deseja cuidar do corpo, prevenir dores e conquistar mais qualidade de vida e bem-estar.
-              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Oferecemos atendimentos no Pilates como prática de exercício físico para quem deseja cuidar do corpo, prevenir dores, conquistar mais qualidade de vida e bem-estar.</p>
             </div>
           </div>
 
