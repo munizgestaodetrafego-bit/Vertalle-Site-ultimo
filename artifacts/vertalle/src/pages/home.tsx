@@ -421,8 +421,8 @@ export default function Home() {
                 name: "Nayara Amorim"
               },
               {
-                quote: "Realizei o meu primeiro atendimento com a Giselle e fiquei admirada com a competência já me sinto muito melhor, além do espaço ser de muita qualidade, bom gosto e conforto! Super indico!",
-                name: "Jéssica Lima"
+                quote: "Giselle passando para agradecer, o Pilates mudou a minha vida. Gratidão",
+                name: "Giselle"
               },
               {
                 quote: "Ambiente adequado e muito bem equipado. Destaque para a qualificação profissional, bem como a comprovada experiência da fisioterapeuta responsável!",
