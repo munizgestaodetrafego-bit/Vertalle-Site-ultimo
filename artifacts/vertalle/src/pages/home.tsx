@@ -1,20 +1,25 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  Activity, 
-  HeartPulse, 
-  ShieldCheck, 
+import {
+  ArrowRight,
+  CheckCircle2,
+  Activity,
+  HeartPulse,
+  ShieldCheck,
   ChevronDown,
   Instagram,
   MessageCircle,
   Clock,
   MapPin,
   Quote,
-  Star
+  Star,
 } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { BookingForm } from "@/components/booking-form";
 
@@ -28,13 +33,19 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in", "fade-in", "slide-in-from-bottom-8", "duration-1000", "fill-mode-forwards");
+            entry.target.classList.add(
+              "animate-in",
+              "fade-in",
+              "slide-in-from-bottom-8",
+              "duration-1000",
+              "fill-mode-forwards",
+            );
             entry.target.classList.remove("opacity-0");
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     );
 
     document.querySelectorAll(".scroll-reveal").forEach((el) => {
@@ -63,16 +74,20 @@ export default function Home() {
           className="w-7 h-7 relative z-10"
           aria-hidden="true"
         >
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
         </svg>
-        <span className="hidden sm:inline relative z-10 font-semibold">Fale conosco</span>
+        <span className="hidden sm:inline relative z-10 font-semibold">
+          Fale conosco
+        </span>
       </a>
       {/* Navigation / Header */}
       <header className="absolute top-0 w-full z-50 py-6 px-6 lg:px-12 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <span className="font-serif font-bold text-xl tracking-wide text-foreground">Vertalle</span>
+  <span className="font-serif font-bold text-xl tracking-wide text-foreground">
+    Vertalle
+  </span>
         </div>
-        <a 
+        <a
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
@@ -94,15 +109,19 @@ export default function Home() {
               <ShieldCheck className="w-4 h-4 text-primary" />
               FISIOTERAPIA ESPECIALIZADA EM COLUNA & PILATES
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-serif font-bold text-foreground leading-[1.1] tracking-tight">
-              Transforme sua vida com <span className="text-primary italic">movimento</span>
+              Transforme sua vida com{" "}
+              <span className="text-primary italic">movimento</span>
             </h1>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">Espaço dedicado ao bem-estar, com foco no tratamento da coluna vertebral e Pilates.</p>
-            
+
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+              Espaço dedicado ao bem-estar, com foco no tratamento da coluna
+              vertebral e Pilates.
+            </p>
+
             <div className="pt-4 flex flex-col sm:flex-row gap-4">
-              <a 
+              <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -113,17 +132,20 @@ export default function Home() {
               </a>
             </div>
           </div>
-          
-          <div className="relative scroll-reveal" style={{ transitionDelay: "200ms" }}>
+
+          <div
+            className="relative scroll-reveal"
+            style={{ transitionDelay: "200ms" }}
+          >
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
-              <img 
-                src="/images/studio-hero.jpeg" 
-                alt="Interior do estúdio de Pilates Vertalle" 
+              <img
+                src="/images/studio-hero.jpeg"
+                alt="Interior do estúdio de Pilates Vertalle"
                 className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent pointer-events-none"></div>
             </div>
-            
+
             {/* Floating badge */}
             <div className="absolute -bottom-8 -left-8 bg-card text-card-foreground p-6 rounded-2xl shadow-xl max-w-xs animate-in fade-in zoom-in duration-1000 delay-500 fill-mode-forwards opacity-0">
               <div className="flex gap-4 items-start">
@@ -131,8 +153,13 @@ export default function Home() {
                   <HeartPulse className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-serif font-bold text-lg leading-tight mb-1">Cuidado humanizado</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Atendimento personalizado focado no seu tempo e nos seus limites.</p>
+                  <p className="font-serif font-bold text-lg leading-tight mb-1">
+                    Cuidado humanizado
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Atendimento personalizado focado no seu tempo e nos seus
+                    limites.
+                  </p>
                 </div>
               </div>
             </div>
@@ -147,17 +174,21 @@ export default function Home() {
               Você se identifica com isso?
             </h2>
             <p className="text-lg text-muted-foreground mb-10 max-w-md">
-              Seu corpo está dando sinais de que precisa de atenção e ignorar isso pode piorar o problema.
+              Seu corpo está dando sinais de que precisa de atenção e ignorar
+              isso pode piorar o problema.
             </p>
-            
+
             <div className="space-y-6">
               {[
                 "Dor nas costas ao longo do dia",
                 "Desconforto na lombar ou cervical",
                 "Corpo travado ao acordar",
-                "Medo de movimentar"
+                "Medo de movimentar",
               ].map((point, i) => (
-                <div key={i} className="flex items-center gap-4 bg-background p-4 rounded-2xl shadow-sm border border-border">
+                <div
+                  key={i}
+                  className="flex items-center gap-4 bg-background p-4 rounded-2xl shadow-sm border border-border"
+                >
                   <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
                     <Activity className="w-5 h-5 text-primary" />
                   </div>
@@ -166,36 +197,44 @@ export default function Home() {
               ))}
             </div>
           </div>
-          
-          <div className="relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden scroll-reveal" style={{ transitionDelay: "200ms" }}>
-             <img 
-                src="/images/therapy.jpg" 
-                alt="Fisioterapia especializada" 
-                className="w-full h-full object-cover"
-              />
+
+          <div
+            className="relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden scroll-reveal"
+            style={{ transitionDelay: "200ms" }}
+          >
+            <img
+              src="/images/therapy.jpg"
+              alt="Fisioterapia especializada"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
       {/* Highlight / Stat Section */}
       <section className="py-24 px-6 lg:px-12 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white rounded-full blur-3xl opacity-10 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-        
+
         <div className="max-w-4xl mx-auto text-center space-y-8 scroll-reveal relative z-10">
           <h2 className="text-4xl lg:text-6xl font-serif font-bold leading-tight">
             Até quando você vai conviver com a dor?
           </h2>
           <p className="text-xl lg:text-2xl text-primary-foreground/90 font-light max-w-3xl mx-auto">
-            O tratamento para dores na coluna, dores irradiadas e ciática pode ser muito mais simples e rápido do que você imagina.
+            O tratamento para dores na coluna, dores irradiadas e ciática pode
+            ser muito mais simples e rápido do que você imagina.
           </p>
-          
+
           <div className="py-8">
             <div className="inline-block border-2 border-primary-foreground/20 rounded-3xl p-8 backdrop-blur-sm bg-black/5">
-              <p className="text-5xl lg:text-7xl font-serif font-bold text-secondary mb-2">97%</p>
-              <p className="text-xl font-medium tracking-wide">dos casos de hérnia de disco não precisam de cirurgia.</p>
+              <p className="text-5xl lg:text-7xl font-serif font-bold text-secondary mb-2">
+                97%
+              </p>
+              <p className="text-xl font-medium tracking-wide">
+                dos casos de hérnia de disco não precisam de cirurgia.
+              </p>
             </div>
           </div>
-          
-          <a 
+
+          <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
@@ -209,10 +248,11 @@ export default function Home() {
       {/* What we treat & Approach */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32">
             <div className="space-y-8 scroll-reveal">
-              <h2 className="text-4xl font-serif font-bold text-foreground">Podemos ajudar você nos seguintes casos:</h2>
+              <h2 className="text-4xl font-serif font-bold text-foreground">
+                Podemos ajudar você nos seguintes casos:
+              </h2>
               <ul className="space-y-4">
                 {[
                   "Hérnia de disco",
@@ -222,23 +262,32 @@ export default function Home() {
                   "Dor cervical",
                   "Limitações de movimento e rigidez muscular",
                   "Dores comuns no envelhecimento e cuidados com a mobilidade do idoso",
-                  "Reabilitação pós-lesão ou pós-cirúrgica"
+                  "Reabilitação pós-lesão ou pós-cirúrgica",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                    <span className="text-lg text-muted-foreground">{item}</span>
+                    <span className="text-lg text-muted-foreground">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
-            
-            <div className="bg-secondary/30 rounded-[3rem] p-10 lg:p-14 scroll-reveal" style={{ transitionDelay: "200ms" }}>
+
+            <div
+              className="bg-secondary/30 rounded-[3rem] p-10 lg:p-14 scroll-reveal"
+              style={{ transitionDelay: "200ms" }}
+            >
               <div className="w-16 h-16 bg-background rounded-full flex items-center justify-center mb-8 shadow-sm">
                 <ShieldCheck className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-3xl font-serif font-bold text-foreground mb-6">E se você não sente dor, também podemos ajudar:</h3>
+              <h3 className="text-3xl font-serif font-bold text-foreground mb-6">
+                E se você não sente dor, também podemos ajudar:
+              </h3>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Oferecemos atendimentos no Pilates como prática de exercício físico para quem deseja cuidar do corpo, prevenir dores e conquistar mais qualidade de vida e bem-estar.
+                Oferecemos atendimentos no Pilates como prática de exercício
+                físico para quem deseja cuidar do corpo, prevenir dores e
+                conquistar mais qualidade de vida e bem-estar.
               </p>
             </div>
           </div>
@@ -246,37 +295,51 @@ export default function Home() {
           {/* Comparison */}
           <div className="mb-24 scroll-reveal">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">Por que escolher a Vertalle?</h2>
-              <p className="text-xl text-muted-foreground">Onde clínicas tradicionais falham, nós focamos em você.</p>
+              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+                Por que escolher a Vertalle?
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Onde clínicas tradicionais falham, nós focamos em você.
+              </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Problem column */}
               <div className="space-y-4">
-                <div className="text-center pb-4 text-muted-foreground font-medium text-sm tracking-widest uppercase">CLÍNICAS GenéricAS</div>
+                <div className="text-center pb-4 text-muted-foreground font-medium text-sm tracking-widest uppercase">
+                  CLÍNICAS GenéricAS
+                </div>
                 {[
                   "Sessões avulsas e tratamentos eternos",
                   "Turmas lotadas de pilates",
                   "Atendimento genérico",
-                  "Falta de acompanhamento"
+                  "Falta de acompanhamento",
                 ].map((item, i) => (
-                  <div key={`bad-${i}`} className="bg-card p-6 rounded-2xl border border-border text-muted-foreground flex items-center opacity-70">
+                  <div
+                    key={`bad-${i}`}
+                    className="bg-card p-6 rounded-2xl border border-border text-muted-foreground flex items-center opacity-70"
+                  >
                     <span className="w-3 h-0.5 bg-muted-foreground/30 mr-4 shrink-0"></span>
                     {item}
                   </div>
                 ))}
               </div>
-              
+
               {/* Solution column */}
               <div className="space-y-4">
-                <div className="text-center pb-4 text-primary font-bold text-sm tracking-widest uppercase">A Abordagem Vertalle</div>
+                <div className="text-center pb-4 text-primary font-bold text-sm tracking-widest uppercase">
+                  A Abordagem Vertalle
+                </div>
                 {[
                   "Planos de tratamento curto e eficiente",
                   "Turmas reduzidas de pilates",
                   "Atendimento personalizado",
-                  "Acompanhamento de perto"
+                  "Acompanhamento de perto",
                 ].map((item, i) => (
-                  <div key={`good-${i}`} className="bg-secondary/50 p-6 rounded-2xl border border-secondary text-foreground font-medium flex items-center shadow-sm">
+                  <div
+                    key={`good-${i}`}
+                    className="bg-secondary/50 p-6 rounded-2xl border border-secondary text-foreground font-medium flex items-center shadow-sm"
+                  >
                     <CheckCircle2 className="w-5 h-5 text-primary mr-4 shrink-0" />
                     {item}
                   </div>
@@ -284,7 +347,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
         </div>
       </section>
       {/* Process Section */}
@@ -292,16 +354,32 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
             <div className="space-y-6 scroll-reveal">
-              <h3 className="text-3xl font-serif font-bold text-foreground">Como funcionam os atendimentos fisioterapêuticos?</h3>
+              <h3 className="text-3xl font-serif font-bold text-foreground">
+                Como funcionam os atendimentos fisioterapêuticos?
+              </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Todo tratamento fisioterapêutico começa com uma consulta inicial minuciosa. Nela, realizamos exame físico detalhado, testes funcionais e avaliações específicas para identificar a real causa da sua queixa. A partir disso, elaboramos e definimos, junto com você, a frequência das sessões e o tempo de tratamento ideal.
+                Todo tratamento fisioterapêutico começa com uma consulta inicial
+                minuciosa. Nela, realizamos exame físico detalhado, testes
+                funcionais e avaliações específicas para identificar a real
+                causa da sua queixa. A partir disso, elaboramos e definimos,
+                junto com você, a frequência das sessões e o tempo de tratamento
+                ideal.
               </p>
             </div>
 
-            <div className="space-y-6 scroll-reveal" style={{ transitionDelay: "150ms" }}>
-              <h3 className="text-3xl font-serif font-bold text-foreground">Como funcionam os atendimentos no Pilates?</h3>
+            <div
+              className="space-y-6 scroll-reveal"
+              style={{ transitionDelay: "150ms" }}
+            >
+              <h3 className="text-3xl font-serif font-bold text-foreground">
+                Como funcionam os atendimentos no Pilates?
+              </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Os atendimentos de Pilates começam com uma avaliação individual para identificar suas necessidades e objetivos. São realizadas em grupos de até três pessoas, com duração de 50 minutos, conduzida por fisioterapeuta, garantindo acompanhamento personalizado e de qualidade.
+                Os atendimentos de Pilates começam com uma avaliação individual
+                para identificar suas necessidades e objetivos. São realizadas
+                em grupos de até três pessoas, com duração de 50 minutos,
+                conduzida por fisioterapeuta, garantindo acompanhamento
+                personalizado e de qualidade.
               </p>
               <div className="pt-4">
                 <a
@@ -321,23 +399,51 @@ export default function Home() {
       <section className="py-24 px-6 lg:px-12 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 scroll-reveal max-w-2xl mx-auto">
-            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Nosso espaço</h2>
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">
+              Nosso espaço
+            </h2>
             <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
               Conheça a Vertalle
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Um ambiente cuidadosamente preparado, com equipamentos de alta qualidade e um clima acolhedor que faz toda a diferença no seu tratamento.
+              Um ambiente cuidadosamente preparado, com equipamentos de alta
+              qualidade e um clima acolhedor que faz toda a diferença no seu
+              tratamento.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-4">
             {[
-              { src: "/images/gallery/04.jpeg", alt: "Estúdio Vertalle com equipamentos de Pilates", className: "col-span-2 row-span-2" },
-              { src: "/images/gallery/03.jpeg", alt: "Aparelhos Reformer no estúdio", className: "col-span-1 row-span-1" },
-              { src: "/images/gallery/05.jpeg", alt: "Cadillac e Reformer no espaço Vertalle", className: "col-span-1 row-span-1" },
-              { src: "/images/gallery/07.jpeg", alt: "Vista ampla do estúdio Vertalle", className: "col-span-2 row-span-2" },
-              { src: "/images/gallery/02.jpeg", alt: "Detalhe dos aparelhos Classic Pilates", className: "col-span-1 row-span-1" },
-              { src: "/images/gallery/06.jpeg", alt: "Sala de avaliação fisioterapêutica", className: "col-span-1 row-span-1" }
+              {
+                src: "/images/gallery/04.jpeg",
+                alt: "Estúdio Vertalle com equipamentos de Pilates",
+                className: "col-span-2 row-span-2",
+              },
+              {
+                src: "/images/gallery/03.jpeg",
+                alt: "Aparelhos Reformer no estúdio",
+                className: "col-span-1 row-span-1",
+              },
+              {
+                src: "/images/gallery/05.jpeg",
+                alt: "Cadillac e Reformer no espaço Vertalle",
+                className: "col-span-1 row-span-1",
+              },
+              {
+                src: "/images/gallery/07.jpeg",
+                alt: "Vista ampla do estúdio Vertalle",
+                className: "col-span-2 row-span-2",
+              },
+              {
+                src: "/images/gallery/02.jpeg",
+                alt: "Detalhe dos aparelhos Classic Pilates",
+                className: "col-span-1 row-span-1",
+              },
+              {
+                src: "/images/gallery/06.jpeg",
+                alt: "Sala de avaliação fisioterapêutica",
+                className: "col-span-1 row-span-1",
+              },
             ].map((img, i) => (
               <div
                 key={i}
@@ -371,32 +477,48 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 scroll-reveal relative">
             <div className="aspect-[3/4] rounded-full overflow-hidden shadow-2xl relative border-8 border-background p-2 bg-secondary">
-               <img 
-                  src="/images/founder.jpg" 
-                  alt="Giselle Gomide - Fundadora" 
-                  className="w-full h-full object-cover rounded-full"
-                />
+              <img
+                src="/images/founder.jpg"
+                alt="Giselle Gomide - Fundadora"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
             {/* Decorative element */}
             <div className="absolute top-1/2 -left-8 w-24 h-24 bg-primary rounded-full mix-blend-multiply opacity-20 blur-xl"></div>
           </div>
-          
-          <div className="lg:col-span-7 space-y-8 scroll-reveal" style={{ transitionDelay: "200ms" }}>
+
+          <div
+            className="lg:col-span-7 space-y-8 scroll-reveal"
+            style={{ transitionDelay: "200ms" }}
+          >
             <div>
-              <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Conheça a fundadora</h2>
-              <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-2">Giselle Gomide</h3>
-              <p className="text-muted-foreground font-medium">FISIOTERAPEUTA — CREFITO: 237462F · RQE nº 473/2026</p>
+              <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">
+                Conheça a fundadora
+              </h2>
+              <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-2">
+                Giselle Gomide
+              </h3>
+              <p className="text-muted-foreground font-medium">
+                FISIOTERAPEUTA — CREFITO: 237462F · RQE nº 473/2026
+              </p>
             </div>
-            
+
             <div className="text-lg lg:text-xl text-foreground/80 leading-relaxed space-y-6 font-light">
               <p>
-                "É um prazer ter você aqui! Meu nome é Giselle Gomide, sou a fundadora da Vertalle, fisioterapeuta há 10 anos e especialista no atendimento à pessoa idosa.
+                "É um prazer ter você aqui! Meu nome é Giselle Gomide, sou a
+                fundadora da Vertalle, fisioterapeuta há 10 anos e especialista
+                no atendimento à pessoa idosa.
               </p>
               <p>
-                Ao longo da minha caminhada, fui me aproximando cada vez mais do tratamento da coluna vertebral, especialmente de pessoas que convivem com dores, limitações e inseguranças. Acredito em um cuidado individualizado, com escuta, acolhimento e respeito ao tempo de cada paciente.
+                Ao longo da minha caminhada, fui me aproximando cada vez mais do
+                tratamento da coluna vertebral, especialmente de pessoas que
+                convivem com dores, limitações e inseguranças. Acredito em um
+                cuidado individualizado, com escuta, acolhimento e respeito ao
+                tempo de cada paciente.
               </p>
               <p className="font-serif font-medium text-2xl text-primary italic pt-4">
-                Na Vertalle, você encontra um espaço preparado para cuidar de você!"
+                Na Vertalle, você encontra um espaço preparado para cuidar de
+                você!"
               </p>
             </div>
           </div>
@@ -406,7 +528,9 @@ export default function Home() {
       <section className="py-24 px-6 lg:px-12 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 scroll-reveal">
-            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Depoimentos</h2>
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">
+              Depoimentos
+            </h2>
             <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground">
               O que dizem nossos pacientes
             </h3>
@@ -415,17 +539,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "Atendimento excelente! O espaço é muito organizado e lindo. A profissional Giselle é muito atenciosa. Super recomendo",
-                name: "Nayara Amorim"
+                quote:
+                  "Atendimento excelente! O espaço é muito organizado e lindo. A profissional Giselle é muito atenciosa. Super recomendo",
+                name: "Nayara Amorim",
               },
               {
-                quote: "Giselle passando para agradecer, o Pilates mudou a minha vida. Gratidão",
-                name: "Simone"
+                quote:
+                  "Giselle passando para agradecer, o Pilates mudou a minha vida. Gratidão",
+                name: "Simone",
               },
               {
-                quote: "Ambiente adequado e muito bem equipado. Destaque para a qualificação profissional, bem como a comprovada experiência da fisioterapeuta responsável!",
-                name: "Luiz Geraldo"
-              }
+                quote:
+                  "Ambiente adequado e muito bem equipado. Destaque para a qualificação profissional, bem como a comprovada experiência da fisioterapeuta responsável!",
+                name: "Luiz Geraldo",
+              },
             ].map((t, i) => (
               <div
                 key={i}
@@ -439,10 +566,15 @@ export default function Home() {
                 <div className="mt-8 pt-6 border-t border-border">
                   <div className="flex gap-1 mb-3">
                     {[...Array(5)].map((_, idx) => (
-                      <Star key={idx} className="w-4 h-4 fill-primary text-primary" />
+                      <Star
+                        key={idx}
+                        className="w-4 h-4 fill-primary text-primary"
+                      />
                     ))}
                   </div>
-                  <p className="font-serif font-bold text-foreground text-lg">{t.name}</p>
+                  <p className="font-serif font-bold text-foreground text-lg">
+                    {t.name}
+                  </p>
                 </div>
               </div>
             ))}
@@ -452,32 +584,38 @@ export default function Home() {
       {/* FAQ */}
       <section className="py-24 bg-secondary/20 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto scroll-reveal">
-          <h2 className="text-4xl font-serif font-bold text-center text-foreground mb-16">Dúvidas frequentes</h2>
-          
+          <h2 className="text-4xl font-serif font-bold text-center text-foreground mb-16">
+            Dúvidas frequentes
+          </h2>
+
           <Accordion type="single" collapsible className="w-full space-y-4">
             {[
               {
                 q: "A Vertalle atende apenas casos relacionados à coluna?",
-                a: "Não. A Vertalle não atende apenas coluna. Embora tenhamos uma atuação especializada no cuidado da coluna vertebral, também oferecemos atendimento fisioterapêutico para outras condições musculoesqueléticas, além de programas de reabilitação e prevenção de dores, sempre de forma individualizada."
+                a: "Não. A Vertalle não atende apenas coluna. Embora tenhamos uma atuação especializada no cuidado da coluna vertebral, também oferecemos atendimento fisioterapêutico para outras condições musculoesqueléticas, além de programas de reabilitação e prevenção de dores, sempre de forma individualizada.",
               },
               {
                 q: "Estou com uma dor forte na coluna. Devo fazer Pilates ou Fisioterapia?",
-                a: "Nos casos de dor aguda na coluna (sintomas que surgiram há menos de 15 dias ou até 3 meses, especialmente com limitação importante) o mais indicado é iniciar o tratamento fisioterapêutico especializado. Nesse período, o foco é controlar a dor, reduzir a incapacidade e recuperar os movimentos com segurança. O Pilates não costuma ser a melhor opção nessa fase inicial, sendo mais adequado após a melhora clínica."
+                a: "Nos casos de dor aguda na coluna (sintomas que surgiram há menos de 15 dias ou até 3 meses, especialmente com limitação importante) o mais indicado é iniciar o tratamento fisioterapêutico especializado. Nesse período, o foco é controlar a dor, reduzir a incapacidade e recuperar os movimentos com segurança. O Pilates não costuma ser a melhor opção nessa fase inicial, sendo mais adequado após a melhora clínica.",
               },
               {
                 q: "Tenho artrose. O Pilates é indicado?",
-                a: "A artrose é um desgaste da cartilagem das articulações e o exercício é fundamental para o controle da dor, para a melhora da mobilidade e para o fortalecimento da musculatura. O Pilates costuma ser uma ótima opção por oferecer acompanhamento próximo e progressão gradual, respeitando seus limites. Em fases de crise ou dor intensa, o ideal pode ser iniciar com fisioterapia e, depois, evoluir para o Pilates."
+                a: "A artrose é um desgaste da cartilagem das articulações e o exercício é fundamental para o controle da dor, para a melhora da mobilidade e para o fortalecimento da musculatura. O Pilates costuma ser uma ótima opção por oferecer acompanhamento próximo e progressão gradual, respeitando seus limites. Em fases de crise ou dor intensa, o ideal pode ser iniciar com fisioterapia e, depois, evoluir para o Pilates.",
               },
               {
                 q: "Tenho dor crônica há meses ou anos. Devo fazer fisioterapia ou Pilates?",
-                a: "Quando a dor é crônica, mas encontra-se controlada e não gera grandes limitações no dia a dia, o Pilates pode ser uma excelente opção para promover fortalecimento, melhorar a mobilidade e prevenir agravamentos. Por outro lado, quando há piora recente do quadro, episódios de travamento ou dificuldade para realizar atividades cotidianas, o mais indicado é iniciar com fisioterapia individualizada. Após a estabilização dos sintomas, a continuidade pode ser feita com o Pilates."
+                a: "Quando a dor é crônica, mas encontra-se controlada e não gera grandes limitações no dia a dia, o Pilates pode ser uma excelente opção para promover fortalecimento, melhorar a mobilidade e prevenir agravamentos. Por outro lado, quando há piora recente do quadro, episódios de travamento ou dificuldade para realizar atividades cotidianas, o mais indicado é iniciar com fisioterapia individualizada. Após a estabilização dos sintomas, a continuidade pode ser feita com o Pilates.",
               },
               {
                 q: "Quando posso sair da fisioterapia e ir para o Pilates?",
-                a: "Essa transição acontece quando a dor está controlada, os movimentos estão mais seguros e você já recuperou melhor sua capacidade funcional. Nesse momento, o Pilates passa a ser uma excelente ferramenta para manter os resultados conquistados, ganhar força, melhorar a postura e evitar novas crises."
-              }
+                a: "Essa transição acontece quando a dor está controlada, os movimentos estão mais seguros e você já recuperou melhor sua capacidade funcional. Nesse momento, o Pilates passa a ser uma excelente ferramenta para manter os resultados conquistados, ganhar força, melhorar a postura e evitar novas crises.",
+              },
             ].map((faq, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="bg-background rounded-2xl border border-border px-6 py-2 shadow-sm data-[state=open]:border-primary/50 transition-colors">
+              <AccordionItem
+                key={i}
+                value={`item-${i}`}
+                className="bg-background rounded-2xl border border-border px-6 py-2 shadow-sm data-[state=open]:border-primary/50 transition-colors"
+              >
                 <AccordionTrigger className="text-left font-serif font-bold text-lg hover:no-underline py-4">
                   {faq.q}
                 </AccordionTrigger>
@@ -490,16 +628,24 @@ export default function Home() {
         </div>
       </section>
       {/* Booking form */}
-      <section id="reservar" className="py-24 px-6 lg:px-12 bg-foreground text-background relative overflow-hidden">
+      <section
+        id="reservar"
+        className="py-24 px-6 lg:px-12 bg-foreground text-background relative overflow-hidden"
+      >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
           <div className="space-y-6 scroll-reveal">
-            <h2 className="text-sm font-bold tracking-widest text-secondary uppercase">Reservar avaliação</h2>
+            <h2 className="text-sm font-bold tracking-widest text-secondary uppercase">
+              Reservar avaliação
+            </h2>
             <h3 className="text-4xl lg:text-6xl font-serif font-bold leading-tight">
               Um novo começo para a sua saúde
             </h3>
-            <p className="text-lg text-background/80 leading-relaxed max-w-md">Conte um pouco sobre você no formulário, e entraremos em contato para agendar sua avaliação.</p>
+            <p className="text-lg text-background/80 leading-relaxed max-w-md">
+              Conte um pouco sobre você no formulário, e entraremos em contato
+              para agendar sua avaliação.
+            </p>
             <p className="text-base text-background/60">
               Prefere o WhatsApp?{" "}
               <a
@@ -523,20 +669,27 @@ export default function Home() {
       <section className="py-24 px-6 lg:px-12 bg-secondary/20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-2 space-y-6 scroll-reveal">
-            <h2 className="text-sm font-bold tracking-widest text-primary uppercase">Onde estamos</h2>
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase">
+              Onde estamos
+            </h2>
             <h3 className="text-4xl lg:text-5xl font-serif font-bold text-foreground leading-tight">
               Venha nos visitar
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Um espaço pensado para receber você com conforto, acolhimento e tudo o que é necessário para o seu tratamento.
+              Um espaço pensado para receber você com conforto, acolhimento e
+              tudo o que é necessário para o seu tratamento.
             </p>
             <div className="flex items-start gap-4 pt-2">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="font-serif font-bold text-xl text-foreground">Rua Conselheiro Lafaiete, 44</p>
-                <p className="text-muted-foreground">Floresta · Belo Horizonte / MG</p>
+                <p className="font-serif font-bold text-xl text-foreground">
+                  Rua Conselheiro Lafaiete, 44
+                </p>
+                <p className="text-muted-foreground">
+                  Floresta · Belo Horizonte / MG
+                </p>
               </div>
             </div>
             <div className="pt-4">
@@ -552,7 +705,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:col-span-3 scroll-reveal" style={{ transitionDelay: "200ms" }}>
+          <div
+            className="lg:col-span-3 scroll-reveal"
+            style={{ transitionDelay: "200ms" }}
+          >
             <div className="relative rounded-[2rem] overflow-hidden shadow-xl border-4 border-background aspect-[4/3] lg:aspect-[16/10]">
               <iframe
                 title="Localização Vertalle"
@@ -570,20 +726,38 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
+<<<<<<< HEAD
               <span className="font-serif font-bold text-xl text-foreground">Vertalle</span>
+=======
+              <span className="font-serif font-bold text-xl text-foreground">
+                Vertalle
+              </span>
+>>>>>>> e8dd2b8 (fix: remove logo completely)
             </div>
-            <p className="text-muted-foreground">Fisioterapia especializada em coluna e Pilates.
-            Cuidado humanizado para o seu bem-estar.</p>
+            <p className="text-muted-foreground">
+              Fisioterapia especializada em coluna e Pilates. Cuidado humanizado
+              para o seu bem-estar.
+            </p>
             <div className="flex gap-4">
-              <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a
+                href={INSTAGRAM_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-bold text-foreground mb-6 flex items-center gap-2">
               <Clock className="w-5 h-5 text-primary" />
@@ -591,16 +765,20 @@ export default function Home() {
             </h4>
             <ul className="space-y-4 text-muted-foreground">
               <li className="flex flex-col">
-                <strong className="text-foreground font-medium">Pilates:</strong>
+                <strong className="text-foreground font-medium">
+                  Pilates:
+                </strong>
                 <span>Segunda a Quinta-feira: 8h, 9h e 10h</span>
               </li>
               <li className="flex flex-col pt-2">
-                <strong className="text-foreground font-medium">Fisioterapia:</strong>
+                <strong className="text-foreground font-medium">
+                  Fisioterapia:
+                </strong>
                 <span>Sextas-feiras: 8h às 13h</span>
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-bold text-foreground mb-6 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-primary" />
@@ -608,17 +786,29 @@ export default function Home() {
             </h4>
             <ul className="space-y-4">
               <li className="text-muted-foreground">
-                <p className="text-foreground font-medium">Rua Conselheiro Lafaiete, 44</p>
+                <p className="text-foreground font-medium">
+                  Rua Conselheiro Lafaiete, 44
+                </p>
                 <p className="text-sm">Floresta · Belo Horizonte / MG</p>
               </li>
               <li>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-background border border-border text-foreground hover:border-primary hover:text-primary transition-colors text-sm font-medium">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-background border border-border text-foreground hover:border-primary hover:text-primary transition-colors text-sm font-medium"
+                >
                   <MessageCircle className="w-4 h-4" />
                   Iniciar conversa pelo WhatsApp
                 </a>
               </li>
               <li>
-                <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
+                <a
+                  href={INSTAGRAM_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2"
+                >
                   <Instagram className="w-4 h-4" />
                   @vertallebh
                 </a>
@@ -626,7 +816,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© 2026 Vertalle · Fisioterapia Especializada</p>
           <p>CREFITO: 237462F · RQE nº 473/2026</p>
