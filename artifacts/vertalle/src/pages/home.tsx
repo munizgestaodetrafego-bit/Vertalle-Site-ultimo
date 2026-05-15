@@ -70,7 +70,6 @@ export default function Home() {
       {/* Navigation / Header */}
       <header className="absolute top-0 w-full z-50 py-6 px-6 lg:px-12 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <img src="/images/logo.png" alt="Vertalle Logo" className="h-10 w-auto" />
           <span className="font-serif font-bold text-xl tracking-wide text-foreground">Vertalle</span>
         </div>
         <a 
@@ -571,7 +570,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-             <img src="/images/logo.png" alt="Vertalle Logo" className="h-8 w-auto" />
               <span className="font-serif font-bold text-xl text-foreground">Vertalle</span>
             </div>
             <p className="text-muted-foreground">Fisioterapia especializada em coluna e Pilates.
