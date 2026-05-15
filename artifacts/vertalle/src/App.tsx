@@ -9,17 +9,7 @@ import NotFound from "@/pages/not-found";
 const queryClient = new QueryClient();
 
 function Router() {
-  // Detecta automaticamente o nome do repositório na URL do GitHub Pages
-  const basePath = window.location.pathname.replace(/\/$/, "");
-
-  return (
-    <WouterRouter base={basePath}>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route component={NotFound} />
-      </Switch>
-    </WouterRouter>
-  );
+  return <Home />;
 }
 
 function App() {
